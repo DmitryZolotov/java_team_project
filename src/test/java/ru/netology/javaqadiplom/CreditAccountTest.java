@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class CreditAccountTest {
 
     @Test
-    public void shouldThrowIllegalArgumentExceptionIfInitialBalanceNull() {
+    public void shouldExceptIfInitialBalanceNull() {
 
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new CreditAccount(0,
@@ -16,7 +16,7 @@ public class CreditAccountTest {
     }
 
     @Test
-    public void shouldThrowIllegalArgumentExceptionIfInitialBalanceNegative() {
+    public void shouldExceptIfInitialBalanceNegative() {
 
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new CreditAccount(-2_000,
@@ -26,7 +26,7 @@ public class CreditAccountTest {
     }
 
     @Test
-    public void shouldThrowIllegalArgumentExceptionIfCreditLimitNull() {
+    public void shouldExceptIfCreditLimitNull() {
 
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new CreditAccount(2_000,
@@ -36,7 +36,7 @@ public class CreditAccountTest {
     }
 
     @Test
-    public void shouldThrowIllegalArgumentExceptionIfCreditLimitNegative() {
+    public void shouldExceptIfCreditLimitNegative() {
 
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new CreditAccount(2_000,
@@ -46,7 +46,7 @@ public class CreditAccountTest {
     }
 
     @Test
-    public void shouldThrowIllegalArgumentExceptionIfRateNull() {
+    public void shouldExceptIfRateNull() {
 
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new CreditAccount(2_000,
@@ -56,7 +56,7 @@ public class CreditAccountTest {
     }
 
     @Test
-    public void shouldThrowIllegalArgumentExceptionIfRateNegative() {
+    public void shouldExceptIfRateNegative() {
 
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new CreditAccount(2_000,
