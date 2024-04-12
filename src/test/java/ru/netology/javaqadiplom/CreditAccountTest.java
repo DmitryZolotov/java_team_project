@@ -116,7 +116,7 @@ public class CreditAccountTest {
 
         account.pay(-4_000);
 
-        Assertions.assertEquals(3_000, account.getBalance());
+        Assertions.assertEquals(7_000, account.getBalance());
     }
 
     @Test
@@ -129,7 +129,7 @@ public class CreditAccountTest {
 
         account.pay(0);
 
-        Assertions.assertEquals(3_000, account.getBalance());
+        Assertions.assertEquals(7_000, account.getBalance());
     }
 
 
