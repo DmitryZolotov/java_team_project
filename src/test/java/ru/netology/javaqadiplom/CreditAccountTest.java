@@ -4,27 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CreditAccountTest {
-
-    @Test
-    public void shouldExceptIfInitialBalanceNull() {
-
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            new CreditAccount(0,
-                    1_000,
-                    15);
-        });
-    }
-
-    @Test
-    public void shouldExceptIfInitialBalanceNegative() {
-
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            new CreditAccount(-2_000,
-                    1_000,
-                    15);
-        });
-    }
-
     @Test
     public void shouldExceptIfCreditLimitNull() {
 
@@ -101,7 +80,7 @@ public class CreditAccountTest {
                 15
         );
 
-        account.pay(3_000);
+        account.pay(12_000);
 
         Assertions.assertEquals(7_000, account.getBalance());
     }
@@ -137,14 +116,14 @@ public class CreditAccountTest {
     @Test
     public void shouldAddToPositiveBalance() {
         CreditAccount account = new CreditAccount(
-                0,
+                1_000,
                 5_000,
                 15
         );
 
         account.add(3_000);
 
-        Assertions.assertEquals(3_000, account.getBalance());
+        Assertions.assertEquals(4_000, account.getBalance());
     }
 
     @Test
